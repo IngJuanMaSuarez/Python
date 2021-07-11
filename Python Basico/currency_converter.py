@@ -1,34 +1,27 @@
+def converter(currency_type, usd,):
+    pesos = int(input('¿How many '+ currency_type + ' do you have? '))
+    dollars = round(pesos / usd, 2)
+    print('Do you have $' + str(dollars) + ' dollars')
+
 menu = """
-Bienvenido al conversor de monedas
+Welcome to the currency converter
 
-1 - Pesos Colombianos
-2 - Pesos Argentinos
-3 - Pesos Mexicanos
+1 - Colombian Pesos
+2 - Argentine Pesos
+3 - Mexican Pesos
 
-Elige una opción: """
+Choose an option: """
 
 opcion = input(menu)
 
 if opcion == '1':
-    cop = int(input('¿How many colombian pesos do you have? '))
-    usd = 3834.55
-    dollars = cop / usd
-    dollars = round(dollars, 2)
-    print('Do you have $' + str(dollars) + ' dollars')
+    converter('colombian pesos', 3834.55)
 
 elif opcion == '2':
-    cop = int(input('¿How many argentine pesos do you have? '))
-    usd = 95.84
-    dollars = cop / usd
-    dollars = round(dollars, 2)
-    print('Do you have $' + str(dollars) + ' dollars')
+    converter('argentine pesos', 95.84)
 
 elif opcion == '3':
-    cop = int(input('¿How many mexican pesos do you have? '))
-    usd = 19.87
-    dollars = cop / usd
-    dollars = round(dollars, 2)
-    print('Do you have $' + str(dollars) + ' dollars')
+    converter('mexican pesos', 19.87)
 
 else:
     print('Enter a correct value')
